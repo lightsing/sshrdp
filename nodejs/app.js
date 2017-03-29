@@ -1,15 +1,6 @@
 const net = require('net');
 
-const config = {
-    ssh: {
-        ip: '127.0.0.1',
-        port: 22
-    },
-    rdp: {
-        ip: '172.16.40.8',
-        port: 3389
-    }
-}
+const config = require('./config');
 
 const server = net.createServer((s) => {
     let handshake = false;
