@@ -40,6 +40,11 @@ const server = net.createServer((s) => {
             s.unref();
         });
     });
+
+    s.on('error', function() {
+        s.destroy();
+        s.unref();
+    });
 });
 
 
